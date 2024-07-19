@@ -1,0 +1,82 @@
+.site-header {
+    padding: 18px 0;
+    background-color: $white-clr;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 0 1px 0 $black-clr;
+}
+.header {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.header__logo-link {
+    display: inline-block;
+}
+.header__list {
+    @include Display($items:center, $space:start, $gap:30px);
+}
+.header__link {
+    @include textStyle($MB:0px, $FS:14px, $FW:400, $CLR:$text-clr, $LH:16px, $CASE:inherit);
+}
+.header__invite-btn{
+    display: inline-block;
+    @include buttonStyle($BTN_W:163px, $BTN_PY:8px,$BTN_BR_Radius:35px, $BTN_Border_CLR:none,$BTN_FS:14px,$BTN_FW:400, $BTN_LH:28px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    border: none;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    
+    &:active{
+        opacity: 60%;
+    }
+}
+.header__hamburger-btn{
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+.modal__wrapper{
+    transition: all 0.3s linear;
+    transform: scale(0);
+    padding:88px 24px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 49;
+    margin: auto;
+    background: linear-gradient(180deg, #2D314D 0%, rgba(45, 49, 77, 0.0001) 100%);
+}
+.modal{
+    width: 100%;
+    padding: 32px 0;
+    background-color: $white-clr;
+}
+.show{
+    transform: scale(1);
+}
+.modal__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-direction: column;
+}
+.modal__link {
+    @include textStyle($MB:0px, $FS:14px, $FW:400, $CLR:$title-clr, $LH:16px, $CASE:inherit);
+}
+
+
+// tablet
+@media (max-width:700px){
+    .site-header{
+        padding: 22px 0;
+    }
+    .header__list{
+        display: none;
+    }
+    .header__invite-btn{
+        display: none;
+    }
+    .header__hamburger-btn{
+        display: block;
+    }
+}
+// tablet

@@ -1,0 +1,52 @@
+.bank-section {
+    padding: 95px 0;
+    background-color: #F4F5F7;
+}
+.bank__content-wrapper{
+    width: 635px;
+    margin-bottom: 72px;
+}
+.bank__title {
+    @include textStyle($MB:16px, $FS:40px, $FW:100, $CLR:$title-clr, $LH:64px, $CASE:inherit);
+}
+.bank__text {
+    @include textStyle($MB:0px, $FS:18px, $FW:100, $CLR:$text-clr, $LH:28px, $CASE:inherit);
+}
+.bank__list {
+    @include Display($items:center, $space:start, $gap:30px);
+}
+.bank__img {
+    margin-bottom: 40px;
+}
+.bank__subtitle {
+    @include textStyle($MB:26px, $FS:24px, $FW:100, $CLR:$title-clr, $LH:28px, $CASE:inherit);
+}
+.bank__subtext {
+    @include textStyle($MB:0px, $FS:16px, $FW:unset, $CLR:$text-clr, $LH:26px, $CASE:inherit);
+}
+
+@media (max-width:1000px){
+    .bank__content-wrapper{
+        text-align: center;
+        padding-bottom: 72px;
+        margin: 0 auto;
+    }
+    .bank__list{
+        @include Display($items:center, $space:center, $gap:30px);
+        flex-wrap: wrap;
+    }
+    .bank__item{
+        text-align: center;
+        width: 295px;
+    }
+}
+@media (max-width:659px){
+    .bank__content-wrapper{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .bank__item{
+        width: 100%;
+    }
+}

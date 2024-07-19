@@ -1,0 +1,88 @@
+.hero-section {
+    padding: 250px 0 170px;
+    position: relative;
+    background-image: url(../../images/hero-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.hero__content-wrapper {
+    width: 447px;
+}
+.hero__title {
+    @include textStyle($MB:24px, $FS:56px, $FW:100, $CLR:$title-clr, $LH:64px, $CASE:inherit);
+}
+.hero__text {
+    @include textStyle($MB:36px, $FS:18px, $FW:unset, $CLR:$text-clr, $LH:28px, $CASE:inherit);
+}
+.hero__invite-btn {
+    @include buttonStyle($BTN_W:163px, $BTN_PY:8px,$BTN_BR_Radius:35px, $BTN_Border_CLR:none,$BTN_FS:14px,$BTN_FW:400, $BTN_LH:28px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    border: none;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    
+    &:active{
+        opacity: 60%;
+    }
+}
+.hero__content-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.hero__content-mobile-img {
+    display: none;
+}
+
+
+
+@media (max-width:1249px){
+    .hero__content-img{
+        width: 650px;
+    }
+}
+@media (max-width:1119px){
+    .hero__content-img{
+        width: 500px;
+        height: 700px;
+    }
+}
+
+// mobile 
+@media (max-width:957px){
+    .hero-section{
+        background-image: none;
+        padding-top: 0;
+    }
+    .hero__content-img{
+        display: none;
+    }
+    .hero__content-mobile-img {
+        display: block;
+        width: 100%;
+    }
+    .hero__content-wrapper{
+        padding-top: 40px;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-100px);
+    }
+    .hero__title{
+        @include textStyle($MB:24px, $FS:40px, $FW:400, $CLR:$title-clr, $LH:47px, $CASE:inherit);
+    }
+    .hero__text{
+        @include textStyle($MB:32px, $FS:15px, $FW:unset, $CLR:$text-clr, $LH:25px, $CASE:inherit);   
+    }
+    .hero__invite-btn{
+        width: 50%;
+    }
+}
+// mobile 
+
+
+@media (max-width:431px){
+    .hero__invite-btn{
+        width: 100%;
+    }
+    .hero__content-wrapper{
+        transform: translateY(-50px);
+    }
+}

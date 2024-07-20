@@ -36,7 +36,7 @@
         margin: 0 auto;
     }
     .article__list {
-        @include Display($items:center, $space:start, $gap:30px);
+        @include Display($items:center, $space:center, $gap:30px);
         flex-wrap: wrap;
     }
 }
